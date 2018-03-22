@@ -1,0 +1,10 @@
+{
+		"name": "BBMRI-ERIC Directory",
+		"short_name": "BBMRI-ERIC Directory",
+		"version": "V.1.0",
+		"description": "BBMRI-ERIC Directory, which is a dockerized and preconfigured MOLGENIS instance",
+        "short_description": "BBMRI-ERIC directory",
+		"catalogue_url": "",
+		"application_url": "",
+		"tags": ["Directory", "Biobank", "Data Management"]
+}
