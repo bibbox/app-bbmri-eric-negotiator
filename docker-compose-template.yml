@@ -1,0 +1,50 @@
+version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+      
+services:
+
+  §§INSTANCE-negotiator:
+   build:
+       context: ./images/negotiator
+    container_name:  §§INSTANCE-negotiator
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    links:
+      - §§INSTANCE-negotiator:negotiator-db
+    ports:
+      - "§§PORT:8080"
+    depends_on:
+      - §§INSTANCE-negotiator-db
+      - §§INSTANCE-negotiator-data
+    volumes_from: 
+      - §§INSTANCE-negotiator-data
+    environment:   
+       DB_HOST: negotiator-db
+       DB_NAME: negotiator
+       DB_USER: negotiator
+       DB_PASSWORD: negotiator
+
+  §§INSTANCE-negotiator-db:
+    image: postgres:9.6.5-alpine
+    container_name: §§INSTANCE-xnat-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    environment:
+      - POSTGRES_PASSWORD=negotiator
+      - POSTGRES_USER=negotiator
+      - POSTGRES_DB=negotiator 
+    volumes_from: 
+      - §§INSTANCE-xnat-data
+    depends_on:
+      - §§INSTANCE-xnat-data
+
+  §§INSTANCE-negotiator-data:
+    image: busybox
+    container_name: §§INSTANCE-xnat-data
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
