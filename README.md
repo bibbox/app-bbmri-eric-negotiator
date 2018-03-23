@@ -1,4 +1,4 @@
-# BBMRI-ERIC negotiator (development version for RD-Connect)
+# BBMRI-ERIC negotiator (dev. version RD-Connect)
 
 ## Hints
 * approx. time with medium fast internet connection: **15 minutes**
