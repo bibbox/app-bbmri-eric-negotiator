@@ -1,8 +1,8 @@
-# BBMRI-ERIC negotiator BIBBOX application (for developmemmt)
+# BBMRI-ERIC negotiator (development version for RD-Connect)
 
 ## Hints
-* approx. time with medium fast internet connection: **5 minutes**
-* initial user/passwordd: **admin / admin**
+* approx. time with medium fast internet connection: **15 minutes**
+* initial user/passwordd: **....**
 
 
 ## Docker Images Used
