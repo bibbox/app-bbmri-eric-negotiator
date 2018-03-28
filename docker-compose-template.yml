@@ -14,7 +14,7 @@ services:
     networks:
       - bibbox-default-network
     links:
-      - §§INSTANCE-negotiator:db
+      - §§INSTANCE-negotiator-db:db
     ports:
       - "§§PORT:8080"
     depends_on:
