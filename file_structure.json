@@ -3,6 +3,9 @@
      
   ],
   "copyfiles":[
-        
+        {
+      "source":"images",
+      "destination":"images"
+       }
     ]
 }

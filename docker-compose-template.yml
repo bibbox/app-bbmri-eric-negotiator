@@ -7,7 +7,7 @@ networks:
 services:
 
   §§INSTANCE-negotiator:
-   build:
+    build:
        context: ./images/negotiator
     container_name:  §§INSTANCE-negotiator
     restart: unless-stopped
@@ -30,7 +30,7 @@ services:
 
   §§INSTANCE-negotiator-db:
     image: postgres:9.6.5-alpine
-    container_name:  §§INSTANCE-negotiator-db:
+    container_name:  §§INSTANCE-negotiator-db
     restart: unless-stopped
     networks:
       - bibbox-default-network
