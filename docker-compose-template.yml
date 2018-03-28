@@ -41,7 +41,7 @@ services:
     volumes_from: 
       - §§INSTANCE-negotiator-data
     depends_on:
-      - §§§INSTANCE-negotiator-data
+      - §§INSTANCE-negotiator-data
 
   §§INSTANCE-negotiator-data:
     image: busybox
