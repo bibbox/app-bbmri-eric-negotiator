@@ -14,7 +14,7 @@ services:
     networks:
       - bibbox-default-network
     links:
-      - §§INSTANCE-negotiator:negotiator-db
+      - §§INSTANCE-negotiator:db
     ports:
       - "§§PORT:8080"
     depends_on:
@@ -30,7 +30,7 @@ services:
 
   §§INSTANCE-negotiator-db:
     image: postgres:9.6.5-alpine
-    container_name: §§INSTANCE-xnat-db
+    container_name:  §§INSTANCE-negotiator-db:
     restart: unless-stopped
     networks:
       - bibbox-default-network
@@ -39,12 +39,12 @@ services:
       - POSTGRES_USER=negotiator
       - POSTGRES_DB=negotiator 
     volumes_from: 
-      - §§INSTANCE-xnat-data
+      - §§INSTANCE-negotiator-data
     depends_on:
-      - §§INSTANCE-xnat-data
+      - §§§INSTANCE-negotiator-data
 
   §§INSTANCE-negotiator-data:
     image: busybox
-    container_name: §§INSTANCE-xnat-data
+    container_name: §§INSTANCE-negotiator-data
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
