@@ -46,5 +46,7 @@ services:
   §§INSTANCE-negotiator-data:
     image: busybox
     container_name: §§INSTANCE-negotiator-data
+    networks:
+      - bibbox-default-network
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
