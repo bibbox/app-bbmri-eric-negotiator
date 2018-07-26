@@ -14,7 +14,7 @@ services:
     networks:
       - bibbox-default-network
     links:
-      - §§INSTANCE-negotiator-db:db
+      - §§INSTANCE-negotiator-db:negotiator-db
     ports:
       - "§§PORT:8080"
     depends_on:
@@ -25,8 +25,8 @@ services:
     environment:   
        DB_HOST: negotiator-db
        DB_NAME: negotiator
-       DB_USER: negotiator
-       DB_PASSWORD: negotiator
+       DB_USER: saher
+       DB_PASSWORD: saher
 
   §§INSTANCE-negotiator-db:
     image: postgres:9.6.5-alpine
@@ -35,8 +35,8 @@ services:
     networks:
       - bibbox-default-network
     environment:
-      - POSTGRES_PASSWORD=negotiator
-      - POSTGRES_USER=negotiator
+      - POSTGRES_PASSWORD=saher
+      - POSTGRES_USER=saher
       - POSTGRES_DB=negotiator 
     volumes_from: 
       - §§INSTANCE-negotiator-data
