@@ -8,7 +8,7 @@ RUN adduser -D -g '' negotiator
 
 RUN ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
 
-ADD bbmri-negotiator-1.2.0.war /usr/local/tomcat/webapps/ROOT.war
+ADD bbmri-negotiator-2.0.2.war /usr/local/tomcat/webapps/ROOT.war
 
 ADD scripts /scripts
 WORKDIR /scripts
