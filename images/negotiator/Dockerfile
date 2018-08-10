@@ -1,4 +1,4 @@
-FROM tomcat:7.0.82-jre7-alpine
+FROM tomcat:9.0.10-jre8-alpine
 
 ADD tomcat-users.xml    /usr/local/tomcat/conf/
 ADD server.xml          /usr/local/tomcat/conf/
