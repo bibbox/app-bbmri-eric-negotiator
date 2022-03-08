@@ -7,7 +7,7 @@ networks:
 services:
 
   §§INSTANCE-negotiator:
-    image: bibbox/negotiator
+    image: bibbox/negotiator:v2.1.3
     container_name:  §§INSTANCE-negotiator
     restart: unless-stopped
     networks:
