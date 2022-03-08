@@ -1,0 +1,42 @@
+version: '3'
+
+networks:
+    bibbox-default-network:
+      external: true
+      
+services:
+
+  bibbox-negotiator:
+    image: bibbox/negotiator
+    container_name:  bibbox-negotiator
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    links:
+      - bibbox-negotiator-db:negotiator-db
+    ports:
+      - "9000:8080"
+    depends_on:
+      - bibbox-negotiator-db
+    volumes: 
+      - ./data/uploads:/uploads
+    environment:   
+       DB_HOST: negotiator-db
+       DB_NAME: negotiator
+       DB_USER: saher
+       DB_PASSWORD: saher
+       DB_PORT: 5432
+
+  bibbox-negotiator-db:
+    image: postgres:9.6.5-alpine
+    container_name:  bibbox-negotiator-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    environment:
+      - POSTGRES_PASSWORD=saher
+      - POSTGRES_USER=saher
+      - POSTGRES_DB=negotiator 
+    volumes: 
+      - ./data/postgres:/var/lib/postgresql/data
+
