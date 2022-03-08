@@ -1,4 +1,0 @@
-{
-  runningcontainers:["§§INSTANCE-negotiator", "§§INSTANCE-negotiator-db"],
-  supportcontainers:["§§INSTANCE-negotiator-data"]    
-}

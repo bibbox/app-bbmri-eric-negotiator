@@ -5,6 +5,6 @@
 		"description": "BBMRI-ERIC Negotiator, development version for the RD-Connect Integration",
         "short_description": "BBMRI-ERIC Negotiator",
 		"catalogue_url": "",
-		"application_url": "",
+		"application_url": "https://github.com/BBMRI-ERIC/negotiator-v2",
 		"tags": ["Biobank", "Data Management"]
 }
