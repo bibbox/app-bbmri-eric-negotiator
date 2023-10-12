@@ -1,2 +1,22 @@
 [
+    	{
+	   "id":"DB_USER",
+	   "display_name":"Name of the database user",
+	   "type":"text",
+	   "default_value":"negotiator",
+	   "description":"The User of the DB created for Negotiator",
+	   "min_length": "1",
+	   "max_length": "128"
+	},
+	{
+        "id":"DB_PASSWORD",
+        "display_name":"Database password",
+        "type":"password",
+        "default_value":"negotiator",
+        "description":"PostgreSQL database password, please change for production",
+        "min_length": "1",
+        "max_length": "128"
+     }
 ]
+
+
